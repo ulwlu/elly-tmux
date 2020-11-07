@@ -1,0 +1,86 @@
+# Themepack format options
+set -goq @elly-status-left-area-left-format "Session:#S/#(tmux ls | wc -l | tr -d ' ')"
+set -goq @elly-status-right-area-right-format "%Y-%m-%d %H:%M"
+set -goq @elly-window-status-current-format "#I:#W#F"
+set -goq @elly-window-status-format "#I:#W#F"
+
+# Powerline color options
+set -goq @powerline-color-main-1 colour240
+set -goq @powerline-color-main-2 colour6
+set -goq @powerline-color-black-1 black
+set -goq @powerline-color-grey-1 colour233
+set -goq @powerline-color-grey-2 colour234
+set -goq @powerline-color-grey-3 colour238
+
+# Powerline options
+set -goqF @powerline-color-activity-1 "#{@powerline-color-grey-3}"
+set -goqF @powerline-status-bg "#{@powerline-color-grey-1}"
+set -goqF @powerline-status-fg "#{@powerline-color-grey-3}"
+set -goqF @powerline-status-left-area-left-bg "#{@powerline-color-grey-2}"
+set -goqF @powerline-status-left-area-left-fg "#{@powerline-color-main-1}"
+set -goqF @powerline-status-left-bg "#{@powerline-color-grey-1}"
+set -goqF @powerline-status-left-fg "#{@powerline-color-grey-3}"
+set -goqF @powerline-status-right-area-right-bg "#{@powerline-color-grey-2}"
+set -goqF @powerline-status-right-area-right-fg "#{@powerline-color-main-1}"
+set -goqF @powerline-status-right-bg "#{@powerline-color-grey-1}"
+set -goqF @powerline-status-right-fg "#{@powerline-color-grey-3}"
+
+# Theme options
+set -goqF @theme-clock-mode-colour "#{@powerline-color-main-1}"
+set -goq  @theme-clock-mode-style 24
+set -goqF @theme-display-panes-active-colour "#{@powerline-color-grey-3}"
+set -goqF @theme-display-panes-colour "#{@powerline-color-grey-1}"
+set -goqF @theme-message-bg "#{@powerline-color-main-1}"
+set -goqF @theme-message-command-bg "#{@powerline-color-main-1}"
+set -goqF @theme-message-command-fg "#{@powerline-color-black-1}"
+set -goqF @theme-message-fg "#{@powerline-color-black-1}"
+set -goqF @theme-mode-bg "#{@powerline-color-main-1}"
+set -goqF @theme-mode-fg "#{@powerline-color-black-1}"
+set -goq  @theme-pane-active-border-bg default
+set -goqF @theme-pane-active-border-fg "#{@powerline-color-main-1}"
+set -goq  @theme-pane-border-bg default
+set -goqF @theme-pane-border-fg "#{@powerline-color-grey-3}"
+set -goqF @theme-status-bg "#{@powerline-status-bg}"
+set -goqF @theme-status-fg "#{@powerline-status-fg}"
+set -goq  @theme-status-interval 1
+set -goq  @theme-status-justify centre
+set -goqF @theme-status-left "#[fg=#{@powerline-status-left-area-left-fg},bg=#{@powerline-status-left-area-left-bg},bold] #{@elly-status-left-area-left-format} #[fg=#{@powerline-status-left-area-left-bg},bg=#{@theme-status-bg},nobold]"
+set -goqF @theme-status-left-bg "#{@powerline-status-left-bg}"
+set -goqF @theme-status-left-fg "#{@powerline-status-left-fg}"
+set -goq  @theme-status-left-length 40
+set -goqF @theme-status-right "#[fg=#{@powerline-status-right-area-right-bg},bg=#{@theme-status-bg}]#[fg=#{@powerline-status-right-area-right-fg},bg=#{@powerline-status-right-area-right-bg},bold] #{@elly-status-right-area-right-format} "
+set -goqF @theme-status-right-bg "#{@powerline-status-right-bg}"
+set -goqF @theme-status-right-fg "#{@powerline-status-right-fg}"
+set -goq  @theme-status-right-length 150
+set -goqF @theme-window-status-activity-bg "#{@theme-status-bg}"
+set -goqF @theme-window-status-activity-fg "#{@powerline-color-activity-1}"
+set -goq  @theme-window-status-separator ""
+set -goqF @theme-window-status-current-bg "#{@powerline-color-black-1}"
+set -goqF @theme-window-status-current-fg "#{@powerline-color-main-2}"
+set -goqF @theme-window-status-format "  #{@elly-window-status-format}  "
+set -goqF @theme-window-status-current-format "#[fg=#{@theme-status-bg},bg=#{@theme-window-status-current-bg}]#[fg=#{@theme-window-status-current-fg},nobold] #{@elly-window-status-current-format} #[fg=#{@theme-status-bg},bg=#{@theme-window-status-current-bg},nobold]"
+
+# Apply @theme-* options to Tmux
+set -gF  display-panes-active-colour "#{@theme-display-panes-active-colour}"
+set -gF  display-panes-colour "#{@theme-display-panes-colour}"
+set -gF  message-command-style "fg=#{@theme-message-command-fg},bg=#{@theme-message-command-bg}"
+set -gF  message-style "fg=#{@theme-message-fg},bg=#{@theme-message-bg}"
+set -gF  status-interval "#{@theme-status-interval}"
+set -gF  status-justify "#{@theme-status-justify}"
+set -gF  status-left "#{@theme-status-left}"
+set -gF  status-left-length "#{@theme-status-left-length}"
+set -gF  status-left-style "fg=#{@theme-status-left-fg},bg=#{@theme-status-left-bg}"
+set -gF  status-right "#{@theme-status-right}"
+set -gF  status-right-length "#{@theme-status-right-length}"
+set -gF  status-right-style "fg=#{@theme-status-right-fg},bg=#{@theme-status-right-bg}"
+set -gF  status-style "fg=#{@theme-status-fg},bg=#{@theme-status-bg}"
+set -gwF clock-mode-colour "#{@theme-clock-mode-colour}"
+set -gwF clock-mode-style "#{@theme-clock-mode-style}"
+set -gwF mode-style "fg=#{@theme-mode-fg},bg=#{@theme-mode-bg}"
+set -gwF pane-active-border-style "fg=#{@theme-pane-active-border-fg},bg=#{@theme-pane-active-border-bg}"
+set -gwF pane-border-style "fg=#{@theme-pane-border-fg},bg=#{@theme-pane-border-bg}"
+set -gwF window-status-activity-style "fg=#{@theme-window-status-activity-fg},bg=#{@theme-window-status-activity-bg}"
+set -gwF window-status-current-format "#{@theme-window-status-current-format}"
+set -gwF window-status-current-style "fg=#{@theme-window-status-current-fg},bg=#{@theme-window-status-current-bg}"
+set -gwF window-status-format "#{@theme-window-status-format}"
+set -gwF window-status-separator "#{@theme-window-status-separator}"
