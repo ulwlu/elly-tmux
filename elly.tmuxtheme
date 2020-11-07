@@ -6,7 +6,7 @@ set -goq @elly-window-status-format "#I:#W#F"
 
 # Powerline color options
 set -goq @powerline-color-main-1 colour240
-set -goq @powerline-color-main-2 colour6
+set -goq @powerline-color-main-2 colour12
 set -goq @powerline-color-black-1 black
 set -goq @powerline-color-grey-1 colour233
 set -goq @powerline-color-grey-2 colour234
