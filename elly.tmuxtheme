@@ -34,7 +34,7 @@ set -gF  status-right-style           "fg=#{@p-status-fg},bg=#{@p-bg}"
 
 set -gwF mode-style                   "fg=#{@p-black},bg=#{@p-main}"
 
-set -gwF pane-border-style            "fg=#{@p-status-fg},bg=default"
+set -gwF pane-border-style            "fg=#{@p-main},bg=default"
 set -gwF pane-active-border-style     "fg=#{@p-main},bg=default"
 
 set -gwF window-status-separator      ""
