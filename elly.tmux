@@ -9,7 +9,7 @@ tmux set -goq @e-lf        "Session:#S/#(tmux ls | wc -l | tr -d ' ')"
 # Color Definition
 tmux set -goq @p-main      colour240
 tmux set -goq @p-bg        colour233
-tmux set -goq @p-accent    colour12
+tmux set -goq @p-accent    colour10
 tmux set -goq @p-status-bg colour234
 tmux set -goq @p-status-fg colour238
 tmux set -goq @p-black     black
